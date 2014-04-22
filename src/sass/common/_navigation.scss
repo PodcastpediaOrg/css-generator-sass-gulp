@@ -1,0 +1,73 @@
+/*navigation .scss file*/
+#nav {
+  height: 38px;
+  overflow: hidden;
+  zoom: 1;
+  margin: 0 auto;
+  max-width: $page-max-width;
+  min-width: $page-min-width;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      width: 12em;
+    }
+  }
+  li a {
+    display: block;
+    border-bottom: none;
+    margin-right: 5px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    height: 38px;
+    background-color: #343435;
+    border-radius: $border-radius-base;
+    text-shadow: 4px 4px 3px #2C2D2E;
+    padding: 5px;
+    &:hover {
+      background-color: #185B8B;
+      color: #fff;
+    }
+  }
+}
+
+#homepage #nav-homepage a,
+#tags #nav-tags a,
+#categories #nav-categories a,
+#support #nav-support a,
+#add-podcast #nav-add-podcast a,
+#contact #nav-contact a,
+#podcasting #nav-podcasting a{
+background-color:#185B8B;	
+}
+
+#nav li a:after {
+	font-family:"podcastpedia";
+	padding-left:3px;
+	font-size:0.9em;		
+}
+#nav-support a:after{
+	content: "\e661";
+}
+#nav-homepage a:after{
+	content: "\e600";
+}
+#nav-categories a:after{
+	content: "\e649";
+}
+#nav-contact a:after{
+	content: "\e660";
+}
+#nav-add-podcast a:after{
+	content: "\e618";
+}
+#nav-tags a:after{
+	content: "\e620";
+}
+#nav-podcasting a:after{
+	content: "\e609";
+}

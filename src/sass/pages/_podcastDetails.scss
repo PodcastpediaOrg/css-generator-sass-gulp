@@ -1,0 +1,74 @@
+#podcast_metadata {
+  border-radius: $border-radius-base;
+  padding: 8px 8px 3px 8px;
+  position: relative;
+  h2 {
+    font-size: 2em;
+    text-transform: normal;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-top: 8px;
+    @include until-mq($break-point-normal){        
+      font-size:1.9em;
+    }
+    @include until-mq($break-point-smaller){   
+      font-size:1.6em;
+    }
+    @include until-mq($break-point-small){
+      font-size: 1.3em;
+      margin-bottom:0px;
+      padding-top:0px;      
+    }
+    @include until-mq($break-point-very-small){
+      font-size: 14px;
+		}    
+  }
+  #pod_image {
+    float: left;
+    width: 220px;
+    height: 220px;
+    margin: 0 10px 10px 0;
+    @include until-mq($break-point-small){
+      height: 150px;
+      width: 150px;
+      margin:0 8px 8px 0;     
+    }
+    @include until-mq($break-point-very-small){
+      height: 75px;	    
+      width: 75px;
+      margin:0 5px 5px 0;   
+    }    
+  }
+  p {
+    margin: 13px 0;
+  }
+  #pod_desc {
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 45px;
+  }
+}
+
+/** categories and keywords buttons*/
+#categs > ul, #keywords > ul {
+  list-style: none;
+  overflow: hidden;
+}
+#categs > ul > li, #keywords > ul > li {
+  float: left;
+  margin: 5px 0;
+}
+@include until-mq($break-point-very-small){						
+	#categs, #keywords {clear:left;}
+}
+
+#pod_like {
+  margin-top:5px
+}
+
+#podcast_copyright {
+  background-color:#F8E0E6;
+  color:#580404;
+  padding:10px;
+}

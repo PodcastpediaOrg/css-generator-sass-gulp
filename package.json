@@ -1,0 +1,25 @@
+{
+  "name": "podcastpedia-css-generator",
+  "version": "0.0.1",
+  "description": "Project for CSS generation used in Podcastpedia.org",
+	"author":"Adrian Matei <ama@codingpedia.org>",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "~3.6.1",
+    "gulp-minify-css": "~0.3.1",
+    "gulp-util": "~2.2.14",
+    "gulp-rename": "~1.2.0",
+    "gulp-sass": "~0.7.1",      
+    "gulp-autoprefixer": "0.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "podcastpedia",
+    "css",
+    "sass"
+  ],
+  "author": "Adrian Matei",
+  "license": "ISC"
+}
