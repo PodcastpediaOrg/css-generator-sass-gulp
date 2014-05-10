@@ -1,15 +1,18 @@
 /*navigation .scss file*/
 #nav {
   height: 38px;
-  overflow: hidden;
+  //overflow: hidden;
   zoom: 1;
   margin: 0 auto;
   max-width: $page-max-width;
   min-width: $page-min-width;
+  z-index: -1;
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
+    display: inline-table;
     li {
       float: left;
       width: 12em;
@@ -23,9 +26,9 @@
     text-align: center;
     text-decoration: none;
     font-size: 13px;
-    height: 38px;
+    height: 28px;
     background-color: #343435;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius-base $border-radius-base 0 0;
     text-shadow: 4px 4px 3px #2C2D2E;
     padding: 5px;
     &:hover {
@@ -33,6 +36,27 @@
       color: #fff;
     }
   }
+}
+
+nav ul:after {
+    content: ""; clear: both; display: block;
+}
+
+#nav ul ul {
+  display: none;
+}
+
+#nav ul ul li {
+    float: none; 
+    border-top: 1px solid #6b727c;
+    position: relative;    
+    a {
+      border-radius: 0px;
+    }
+}
+
+#nav ul li:hover > ul {
+    display: block;
 }
 
 #homepage #nav-homepage a,
@@ -50,24 +74,88 @@ background-color:#185B8B;
 	padding-left:3px;
 	font-size:0.9em;		
 }
-#nav-support a:after{
-	content: "\e661";
+#nav-responsive a:after{
+	content: "\e637";
+    font-size: 1.3em;
 }
+
 #nav-homepage a:after{
 	content: "\e600";
 }
-#nav-categories a:after{
-	content: "\e649";
-}
-#nav-contact a:after{
-	content: "\e660";
-}
-#nav-add-podcast a:after{
-	content: "\e618";
-}
-#nav-tags a:after{
+#nav-tags a:after, #nav-tags-resp a:after{
 	content: "\e620";
 }
-#nav-podcasting a:after{
+#nav-categories a:after, #nav-categories-resp a:after{
+	content: "\e649";
+}
+#nav-contact a:after, #nav-contact-resp a:after{
+	content: "\e660";
+}
+#nav-add-podcast a:after, #nav-add-podcast-resp a:after{
+	content: "\e618";
+}
+#nav-support a:after, #nav-support-resp a:after{
+	content: "\e661";
+}
+#nav-podcasting a:after, #nav-podcasting-resp a:after{
 	content: "\e609";
+}
+
+#nav-categories-resp, #nav-add-podcast-resp, #nav-support-resp, #nav-contact-resp, #nav-podcasting-resp, #nav-tags-resp {
+  display: none;
+}
+
+#nav-podcasting-resp {
+  border-radius: 0 0 $border-radius-base $border-radius-base;
+}
+
+@media screen and (min-width: 1040px) {
+  #nav-responsive {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1039px) {
+  #nav-podcasting-resp, #nav-contact-resp {
+    display: block;
+  }
+  #nav-podcasting, #nav-contact {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #nav-support-resp { 
+    display: block;
+  }
+  #nav-support {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #nav-add-podcast-resp { 
+    display: block;
+  }
+  #nav-add-podcast {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  #nav-categories-resp { 
+    display: block;
+  }
+  #nav-categories {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  #nav-tags-resp { 
+    display: block;
+  }
+  #nav-tags {
+    display: none;
+  }
 }
