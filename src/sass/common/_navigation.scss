@@ -13,7 +13,7 @@
     padding: 0;
     position: relative;
     display: inline-table;
-    li {
+    > li {
       float: left;
       width: 12em;
     }
@@ -38,7 +38,7 @@
   }
 }
 
-nav ul:after {
+#nav ul:after {
     content: ""; clear: both; display: block;
 }
 
@@ -74,8 +74,8 @@ background-color:#185B8B;
 	padding-left:3px;
 	font-size:0.9em;		
 }
-#nav-responsive a:after{
-	content: "\e637";
+#nav #nav-responsive > a:after{
+	content: "\e663";
     font-size: 1.3em;
 }
 
@@ -105,7 +105,7 @@ background-color:#185B8B;
   display: none;
 }
 
-#nav-podcasting-resp {
+#nav #nav-podcasting-resp > a{
   border-radius: 0 0 $border-radius-base $border-radius-base;
 }
 

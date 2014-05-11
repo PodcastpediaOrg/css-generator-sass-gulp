@@ -20,7 +20,7 @@ ul.pureCssMenu table {border-collapse:collapse}ul.pureCssMenu {
 	float: left;
 }
 ul.pureCssMenu ul{
-	width:67.2px;
+	width:100%;
 }
 ul.pureCssMenu li{
 	display:block;
@@ -126,3 +126,6 @@ ul.pureCssMenu ul span,ul.pureCssMenu a:hover table span:after {
 	content: "\e658";
 	margin-left: 5px;	
 }  
+ul.pureCssMenu ul li {
+  border-top: 1px solid #6b727c;
+}
