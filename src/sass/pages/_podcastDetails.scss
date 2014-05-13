@@ -21,7 +21,7 @@
     }
     @include until-mq($break-point-very-small){
       font-size: 14px;
-		}    
+    }    
   }
   #pod_image {
     float: left;

@@ -59,9 +59,9 @@
       display: none;
     }    
   }
-  @include until-mq($break-point-small){ 
-    margin-bottom:0px;
+  @include until-mq($break-point-small){     
     margin:0 auto;
+    margin-bottom:5px;
     text-align: center;    
     h1 {
       font-size: 27px;
@@ -123,6 +123,7 @@
   @include until-mq($break-point-small){ 
     margin-bottom:0px;
     margin:0 auto;
+    margin-top: -5px;
     text-align: center;    
   }  
   p {

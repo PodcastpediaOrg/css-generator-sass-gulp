@@ -1,7 +1,6 @@
 /*navigation .scss file*/
 #nav {
   height: 38px;
-  //overflow: hidden;
   zoom: 1;
   margin: 0 auto;
   max-width: $page-max-width;
@@ -13,24 +12,27 @@
     padding: 0;
     position: relative;
     display: inline-table;
+    z-index: 501;
     > li {
       float: left;
       width: 12em;
     }
+    &:after {
+      content: ""; clear: both; display: block;
+    }
   }
-  li a {
+  li a {     
     display: block;
-    border-bottom: none;
     margin-right: 2px;
     color: #fff;
     text-align: center;
     text-decoration: none;
     font-size: 13px;
-    height: 28px;
-    background-color: #343435;
-    border-radius: $border-radius-base $border-radius-base 0 0;
+    height: 28px;      
     text-shadow: 4px 4px 3px #2C2D2E;
     padding: 5px;
+    background-color: #343435;
+    border-radius: $border-radius-base $border-radius-base 0 0;
     &:hover {
       background-color: #185B8B;
       color: #fff;
@@ -38,27 +40,24 @@
   }
 }
 
-#nav ul:after {
-    content: ""; clear: both; display: block;
-}
-
-#nav ul ul {
-  display: none;
-}
-
-#nav ul ul li {
-    float: none; 
-    border-top: 1px solid #6b727c;
-    position: relative;    
-    a {
-      border-radius: 0px;
+#nav ul {
+  ul {
+    display: none;
+    li {
+      float: none;
+      border-top: 1px solid #6b727c;
+      position: relative;
+      a {
+        border-radius: 0px;
+      }
     }
-}
-
-#nav ul li:hover > ul {
+  }
+  li:hover > ul {
     display: block;
+  }
 }
 
+/* sets background-color when selected page is active */
 #homepage #nav-homepage a,
 #tags #nav-tags a,
 #categories #nav-categories a,
@@ -66,19 +65,22 @@
 #add-podcast #nav-add-podcast a,
 #contact #nav-contact a,
 #podcasting #nav-podcasting a{
-background-color:#185B8B;	
+  background-color:#185B8B;	
 }
 
+/** set size of icon fonts that appear after menu entries */
 #nav li a:after {
 	font-family:"podcastpedia";
 	padding-left:3px;
 	font-size:0.9em;		
 }
+// incon font for menu icon should be bigger 
 #nav #nav-responsive > a:after{
 	content: "\e663";
     font-size: 1.3em;
 }
 
+/** to make a responsive menu duplicate list elements from the menu*/
 #nav-homepage a:after{
 	content: "\e600";
 }
@@ -109,6 +111,7 @@ background-color:#185B8B;
   border-radius: 0 0 $border-radius-base $border-radius-base;
 }
 
+/** media queries to hide and show menu items, based on the display width */
 @media screen and (min-width: 1040px) {
   #nav-responsive {
     display: none;
