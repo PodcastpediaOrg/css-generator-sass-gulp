@@ -21,4 +21,4 @@ Project that generates the CSS used for Podcastpedia.org from Sass (.scss). The 
 * [Simple trick to create a one line horizontal responsive menu with CSS only – Podcastpedia.org](http://www.codingpedia.org/ama/simple-trick-to-create-a-one-line-horizontal-responsive-menu-with-css-only-podcastpedia-org/)
 
 ##License
-Copyright (c) 2014 Codingpedia Association, Inc. See the LICENSE file for license rights and limitations (MIT).
+Copyright (c) 2014 Codingpedia Association. See the LICENSE file for license rights and limitations (MIT).
