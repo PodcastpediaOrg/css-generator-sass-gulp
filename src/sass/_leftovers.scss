@@ -5,9 +5,21 @@ padding:13px;
 }
 
 .ep_desc,.pod_desc {
-margin:5px;
-padding:0;
-margin-bottom:45px;
+  margin:5px;
+  padding:0;
+  margin-bottom:45px;
+  @include above-mq(720px){ 
+    display: none;
+  }   
+}
+
+.ep_desc_bigger,.pod_desc_bigger {
+  margin:5px;
+  padding:0;
+  margin-bottom:45px;
+  @include until-mq(720px){ 
+    display: none;
+  }   
 }
 
 .social_and_download,#social_and_download_curr_ep {
@@ -37,7 +49,6 @@ text-decoration: none;
 margin:0 0 20px 30px;
 }
 
-
 #image_podcasting {
 display:block;
 margin-left:auto;
@@ -64,11 +75,4 @@ width:120px;
 height:120px;
 margin-right:20px;
  
-}
-
-#pcp_pic_contribute {
-float:left;
-width:150px;
-height:150px;
-margin-right:20px;
 }
