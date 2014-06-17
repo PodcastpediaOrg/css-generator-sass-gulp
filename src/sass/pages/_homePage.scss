@@ -148,3 +148,16 @@ border-radius:5px;
 .chart li p{
   display:inline;
 }
+
+//responsive titles length
+@media all and (min-width: 1070px), all and (min-width: 550px) and (max-width: 640px){
+  .pod_title_start_smaller{
+    display: none;
+  }
+}
+
+@media all and (max-width: 549px), all and (min-width: 641px) and (max-width: 1069px){
+  .pod_title_start{
+    display: none;
+  }  
+}
