@@ -1929,8 +1929,9 @@ a.btn-share:visited, a.btn-metadata1:visited, a.btn-metadata2:visited {
   font-size: 1.2em;
   background: #d15c2e;
   padding: 5px;
-  border: solid #6b220a 1px;
+  // border: solid #6b220a 1px;
   text-decoration: none;
+  margin-right: 5px;
 }
 
 .btn-metadata1:hover {
