@@ -82,9 +82,14 @@ a.producer-social {
 .icon-social-producer {
   vertical-align: middle;
 }
+.icon-globe-producer:before {
+    @extend .icon-social-producer;
+    color: #084B8A;
+	content: "\e658";
+}
 .icon-feed-producer:before {
     @extend .icon-social-producer;
-    color: #d15c2e;
+    color: #DF7401;
 	content: "\e643";
 }
 .icon-facebook-producer:before {
