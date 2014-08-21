@@ -107,3 +107,9 @@ a.producer-social {
     color: #dd4b39;
 	content: "\e63c";
 }
+.icon-email-subscribe:before {
+    @extend .icon-social-producer; 
+    font-size: 2em;
+    text-decoration: none;  
+	content: "\e63a"; 
+}
